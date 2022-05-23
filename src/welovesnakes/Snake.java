@@ -1,4 +1,5 @@
 package welovesnakes;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -12,6 +13,7 @@ public class Snake {
 		private int width, height;
 		public AffineTransform tx;
 		private double scaleW = 3.0, scaleH = 3.0;
+		public static String direction = "";
 		
 
 		public Snake(int x, int y) {
@@ -27,10 +29,48 @@ public class Snake {
 			//these are the 2 lines of code needed draw an image on the screen
 			Graphics2D g2 = (Graphics2D) g;
 			
-			//call update to update the actually picture location
+			//call update to update the actual picture location
 			update();
 			
+			if(Frame.gameStart == true) {
 				
+				for(int i = 0; i < Frame.snakeLength;i++) {
+					if(i == 0) {
+						g.setColor(new Color(255, 190, 242));
+						g.fillRect(Frame.x[i], Frame.y[i], Frame.block, Frame.block);
+					}
+					else {
+						g.setColor(new Color(255, 240, 252));
+						g.fillRect(Frame.x[i], Frame.y[i], Frame.block, Frame.block);
+					}			
+				}
+			
+			}
+		
+				
+		}
+		
+		public static void go() {
+			for(int i = Frame.snakeLength;i > 0;i--) {
+				Frame.x[i] = Frame.x[i - 1];
+				Frame.y[i] = Frame.y[i - 1];
+			}
+			
+			switch(direction) {
+			case "up":
+				Frame.y[0] = Frame.y[0] - Frame.block;
+				break;
+			case "down":
+				Frame.y[0] = Frame.y[0] + Frame.block;
+				break;
+			case "right":
+				Frame.x[0] = Frame.x[0] + Frame.block;
+				break;
+			case "left":
+				Frame.x[0] = Frame.x[0] - Frame.block;
+				break;
+			}
+			
 		}
 		/* update the picture variable location */
 		public void update() {

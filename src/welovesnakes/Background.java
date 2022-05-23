@@ -10,11 +10,11 @@ import java.awt.event.MouseListener;
 import java.awt.geom.AffineTransform;
 import java.net.URL;
 
-public class Background{
+public class Background {
 	
 	public int x, y;
 	private AffineTransform tx;
-
+	
 	public Background(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -37,7 +37,7 @@ public class Background{
 		update();
 		
 
-		g.setColor(new Color(243, 232, 255)); //purple
+		g.setColor(new Color(242, 238, 242)); //purple
 		
 		for(int i = 0; i < Frame.width; i+= Frame.block) {
 			g.fillRect(0 + i, 0 + i, Frame.block, Frame.block); //diagonal from top left to bottom right
@@ -60,7 +60,7 @@ public class Background{
 		
 		}
 		
-		g.setColor(new Color(254, 232, 255)); //pink
+		g.setColor(new Color(229, 221, 233)); //pink
 		
 		for(int i = 0; i < Frame.width; i+= Frame.block) {
 			g.fillRect(Frame.block + i, 0 + i, Frame.block, Frame.block); //diagonal from top left to bottom right
@@ -98,15 +98,5 @@ public class Background{
 		tx.scale(1, 0.8);
 	}
 
-	private Image getImage(String path) {
-		Image tempImage = null;
-		try {
-			URL imageURL = Background.class.getResource(path);
-			tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return tempImage;
-	}
 
 }
