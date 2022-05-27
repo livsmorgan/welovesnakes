@@ -33,54 +33,54 @@ public class Background {
 		//these are the 2 lines of code needed draw an image on the screen
 		Graphics2D g2 = (Graphics2D) g;
 		
-		//call update to update the actually picture location
+		//call update to update the actual picture location
 		update();
 		
 
 		g.setColor(new Color(242, 238, 242)); //purple
 		
-		for(int i = 0; i < Frame.width; i+= Frame.block) {
-			g.fillRect(0 + i, 0 + i, Frame.block, Frame.block); //diagonal from top left to bottom right
-			g.fillRect(2 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(4 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(6 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(8 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
+		for(int i = 0; i < Frame.boardWidth; i+= Frame.blocksOfBoard) {
+			g.fillRect(0 + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //diagonal from top left to bottom right
+			g.fillRect(2 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(4 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(6 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(8 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
 			
 		}
 		
-		for(int i = 0; i < Frame.width; i += 2 * Frame.block) {
-			g.fillRect(0, 0 + i, Frame.block, Frame.block); //index 0 column 
-			g.fillRect(Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(2 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(3 * Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(4 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(5 * Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(6 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(7 * Frame.block, Frame.block + i, Frame.block, Frame.block);
+		for(int i = 0; i < Frame.boardWidth; i += 2 * Frame.blocksOfBoard) {
+			g.fillRect(0, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //index 0 column 
+			g.fillRect(Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(2 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(3 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(4 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(5 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(6 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(7 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
 		
 		}
 		
 		g.setColor(new Color(229, 221, 233)); //pink
 		
-		for(int i = 0; i < Frame.width; i+= Frame.block) {
-			g.fillRect(Frame.block + i, 0 + i, Frame.block, Frame.block); //diagonal from top left to bottom right
-			g.fillRect(3 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(5 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(7 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
-			g.fillRect(9 * Frame.block + i, 0 + i, Frame.block, Frame.block); 
+		for(int i = 0; i < Frame.boardWidth; i+= Frame.blocksOfBoard) {
+			g.fillRect(Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //diagonal from top left to bottom right
+			g.fillRect(3 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(5 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(7 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
+			g.fillRect(9 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
 			
 		}
 		
-		for(int i = 0; i < Frame.width; i += 2 * Frame.block) {
-			g.fillRect(0, Frame.block + i, Frame.block, Frame.block); //index 0 column 
-			g.fillRect(Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(2 * Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(3 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(4 * Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(5 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(6 * Frame.block, Frame.block + i, Frame.block, Frame.block);
-			g.fillRect(7 * Frame.block, 0 + i, Frame.block, Frame.block);
-			g.fillRect(8 * Frame.block, Frame.block + i, Frame.block, Frame.block);
+		for(int i = 0; i < Frame.boardWidth; i += 2 * Frame.blocksOfBoard) {
+			g.fillRect(0, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //index 0 column 
+			g.fillRect(Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(2 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(3 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(4 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(5 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(6 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(7 * Frame.blocksOfBoard, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
+			g.fillRect(8 * Frame.blocksOfBoard, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard);
 		
 		}
 		
