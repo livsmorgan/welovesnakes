@@ -25,8 +25,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	static int blocksOfBoard = 70; //should be width or height/ divided by 10
 	static int unitsOfBoard = boardWidth / (blocksOfBoard) * 10;
 	//public static int[][] board = new int[unitsOfBoard][unitsOfBoard];
-	public int[] xBoard = new int[unitsOfBoard];
-	public int[] yBoard = new int[unitsOfBoard];
+	public int[] xBoard = new int[unitsOfBoard]; //makes the 2d array with separate
+	public int[] yBoard = new int[unitsOfBoard]; //x rows and y columns
 	
 	//score variables
 	int score = 0;
@@ -41,14 +41,22 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	int speed = 300;
 	int d = 0;
 	
+	//timer
+	Timer timer;
+	
 	//whether or not the game is running 
 	public static boolean playing = false; 
+	
+	//whether or not instructions are shown
+	public static boolean instructions = false;
+	
+	
 	
 	//objects(background)
 	Background	bg = new Background(0, 0);
 	
 	//size of the snake
-	int snakeLength = 3;
+	int snakeLength = 2;
 	
 	//to start the game
 	public void startGame() {
@@ -64,6 +72,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//paint the background from the background class
 		bg.paint(g);
 		
+		
 		//draws the snake and the 
 		if(playing == true) {
 			
@@ -78,15 +87,30 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 				//creation of the head of the snake
 				if(i == 0) {
 					g.setColor(new Color(158,121,200)); //purple square for the head
-					g.fillRect(xBoard[i], yBoard[i], blocksOfBoard, blocksOfBoard);
+					g.fillRect(xBoard[i] + blocksOfBoard, yBoard[i] + blocksOfBoard, blocksOfBoard, blocksOfBoard);
 				//creation of the body of the snake
 				}else {
 					g.setColor(new Color(206, 189, 227)); //light purple square for the body
-					g.fillRect(xBoard[i], yBoard[i], blocksOfBoard, blocksOfBoard);
+					g.fillRect(xBoard[i] + blocksOfBoard, yBoard[i] + blocksOfBoard, blocksOfBoard, blocksOfBoard);
 				}
 					
 			}
 			
+		}
+		
+		if(instructions == true) {
+			g.fillRect(blocksOfBoard*1/2, blocksOfBoard*1/2, blocksOfBoard * 9, blocksOfBoard * 9);
+			g.setColor(new Color(74, 40, 116));
+			g.setFont(new Font("Baskerville", Font.BOLD, blocksOfBoard * 35 / 100)); 
+			g.drawString("instructions to play the snake game", blocksOfBoard, blocksOfBoard );
+			g.setColor(new Color(117, 88, 154));
+			g.setFont(new Font("Baskerville", Font.PLAIN, blocksOfBoard * 2 / 7)); 
+			g.drawString("use the wasd keys or the arrow keys to change direction of snake", blocksOfBoard, blocksOfBoard * 3 / 2);
+			g.drawString("use the space bar to start the snake game", blocksOfBoard, blocksOfBoard * 2);
+			g.drawString("use the number keys to change the speed of the snake:", blocksOfBoard, blocksOfBoard * 5 / 2);
+			g.drawString("1: fast", blocksOfBoard * 3 / 2, blocksOfBoard * 3);
+			g.drawString("2: normal", blocksOfBoard * 3 / 2, blocksOfBoard * 7 / 2);
+			g.drawString("3: slow", blocksOfBoard * 3 / 2, blocksOfBoard * 4);
 		}
 		
 	}
@@ -97,7 +121,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		//x coordinate for the apple
 		xFood = r.nextInt(boardWidth/blocksOfBoard) * blocksOfBoard + 9;
 		//y coordinate for the apple
-		yFood = r.nextInt(boardHeight/blocksOfBoard)* blocksOfBoard + 9;		
+		yFood = r.nextInt(boardHeight/blocksOfBoard)* blocksOfBoard + 9;	
+		
 		
 	}
 	
@@ -125,8 +150,31 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		}
 		
 		
+	}
+	
+	public void collide() {
+		//snake colliding with itself 
+		for(int i = 0; i < snakeLength; i++) {
+			if(xBoard[0] == xBoard[i] && yBoard[0] == yBoard[i]) {
+				playing = false;
+			}
+			if(xBoard[i] < 0 || xBoard[i] > boardWidth) {
+				playing = false;
+			}
+			if(yBoard[i] < 0 || yBoard[i] > boardHeight) {
+				playing = false;
+			}
+			
+		}
 		
 	}
+	
+	public void timer() {
+		if(playing == false) {
+			timer.stop();
+		}
+	}
+	
 	
 	public static void main(String[] args) {
 		new Frame();
@@ -178,6 +226,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		// TODO Auto-generated method stub
 		if(playing == true) {
 			runSnake();
+			//collide();
 		}
 		repaint();
 	}
@@ -190,6 +239,20 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 			//to start the game
 				case 32: //space bar
 					startGame();
+					break;
+					
+			//changes the size of the board
+				case 45: //minus key
+					boardWidth = 500;
+					boardHeight = 500;
+					blocksOfBoard = 50;
+					setPreferredSize(new Dimension(boardWidth, boardHeight));
+					break;
+				case 61: //plus key
+					boardWidth = 900;
+					boardHeight = 900;
+					blocksOfBoard = 90;
+					setPreferredSize(new Dimension(boardWidth, boardHeight));
 					break;
 					
 			//two ways to move snake: arrows or wasd
@@ -229,6 +292,10 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 					speed = 300;
 					break;
 					
+			//shows the instruction panel
+				case 16://shift key
+					instructions = true;
+					
 			}
 			
 			
@@ -238,6 +305,13 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
+		switch(arg0.getKeyCode()) {
+		
+			//when user lets go of the key, the instruction panel goes away
+			case 16: //shift key
+				instructions = false;
+		}
+		
 		
 	}
 

@@ -37,7 +37,7 @@ public class Background {
 		update();
 		
 
-		g.setColor(new Color(242, 238, 242)); //purple
+		g.setColor(new Color(242, 238, 242)); //lighter purple grey
 		
 		for(int i = 0; i < Frame.boardWidth; i+= Frame.blocksOfBoard) {
 			g.fillRect(0 + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //diagonal from top left to bottom right
@@ -60,7 +60,8 @@ public class Background {
 		
 		}
 		
-		g.setColor(new Color(229, 221, 233)); //pink
+		g.setColor(new Color(229, 221, 233)); //darker purple
+		
 		
 		for(int i = 0; i < Frame.boardWidth; i+= Frame.blocksOfBoard) {
 			g.fillRect(Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //diagonal from top left to bottom right
@@ -70,6 +71,7 @@ public class Background {
 			g.fillRect(9 * Frame.blocksOfBoard + i, 0 + i, Frame.blocksOfBoard, Frame.blocksOfBoard); 
 			
 		}
+	
 		
 		for(int i = 0; i < Frame.boardWidth; i += 2 * Frame.blocksOfBoard) {
 			g.fillRect(0, Frame.blocksOfBoard + i, Frame.blocksOfBoard, Frame.blocksOfBoard); //index 0 column 
