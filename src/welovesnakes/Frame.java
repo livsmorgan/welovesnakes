@@ -50,6 +50,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	//whether or not instructions are shown
 	public static boolean instructions = false;
 	
+	//create the variable to initialize frame
+	static JFrame f = new JFrame("we love snakes");
 	
 	
 	//objects(background)
@@ -180,8 +182,9 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		new Frame();
 	}
 	
+	
+	
 	public Frame() {
-		JFrame f = new JFrame("we love snakes");
 		f.setSize(new Dimension(boardWidth, boardHeight));
 		f.setBackground(Color.black);
 		f.add(this);
@@ -243,16 +246,16 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 					
 			//changes the size of the board
 				case 45: //minus key
-					boardWidth = 500;
-					boardHeight = 500;
-					blocksOfBoard = 50;
-					setPreferredSize(new Dimension(boardWidth, boardHeight));
+					boardWidth -= 100;
+					boardHeight -= 100;
+					blocksOfBoard -= 10;
+					f.setSize(new Dimension(boardWidth, boardHeight));
 					break;
 				case 61: //plus key
-					boardWidth = 900;
-					boardHeight = 900;
-					blocksOfBoard = 90;
-					setPreferredSize(new Dimension(boardWidth, boardHeight));
+					boardWidth += 100;
+					boardHeight += 100;
+					blocksOfBoard += 10;
+					f.setSize(new Dimension(boardWidth, boardHeight));
 					break;
 					
 			//two ways to move snake: arrows or wasd
