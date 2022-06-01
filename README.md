@@ -25,16 +25,18 @@ The snake is created when the boolan variable, playing, is true. The snake is cr
 <img width="300" alt="Screen Shot 2022-06-01 at 12 04 09 AM" src="https://user-images.githubusercontent.com/89156607/171346917-c975c58f-cf71-4fe4-b894-58e755c57c3e.png"> <br>
 
 ##### Food
-The food is just a circle that is created when th game is running. <br>
-<img width="300" alt="Screen Shot 2022-06-01 at 12 03 58 AM" src="https://user-images.githubusercontent.com/89156607/171346885-2e1447ad-fec9-40e3-95cf-c9c4817c33dc.png"> <br>
+The food is just a circle that is created when the game is running. When the snake collides with the food, the score and snake's body length each increases by 1.  <br>
+<img width="90" alt="Screen Shot 2022-06-01 at 10 03 46 AM" src="https://user-images.githubusercontent.com/89156607/171460592-2140503f-4efe-4899-97cf-9b91499e3d68.png"> 
+<img width="500" alt="Screen Shot 2022-06-01 at 12 03 58 AM" src="https://user-images.githubusercontent.com/89156607/171346885-2e1447ad-fec9-40e3-95cf-c9c4817c33dc.png"> <br>
 
 ###### Randomization of the Food
-This causes the food to randomize on another location on the 2 1d arrays and set an circle for food in a block. This occurs after the snake has collided with a food.
-<img width="300" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png"> <br>
+This causes the food to randomize on another location on the 2 1d arrays and set an circle for food in a block. This occurs after the snake has collided with a food. <br>
+<img width="500" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png"> <br>
 
 ##### Display Panel
-This was created to help the users understand how the game works and how to play the game.
-<img width="300" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png">
+This was created to help the users understand how the game works and how to play the game. When the user holds down on the enter/return key, the instructions appear. <br>
+
+<img width="300" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png"> <br>
 
 ##### Run 
 The snake is able to move through this run method and a timer is what actually invokes the movement of the snake. However, the changes in directions for the snake are induced by switch-case statements. <br>
