@@ -18,7 +18,6 @@ In this class, we created the checkerboard pattern for the game board, using fil
 <img width="300" alt="backgroundnoncode" src="https://user-images.githubusercontent.com/89156607/171343711-c7a63c96-421a-41d6-b740-75fd15cf451c.png"> 
 <img width="340" alt="backgroundsnake" src="https://user-images.githubusercontent.com/89156607/171343870-94d74c34-19dd-4c61-bef0-a9943d64f97f.png"> <br>
 #### Frame
-<br>
 The majority of the action is going on in the frame. This has all of the methods needed to play the game. It also invokes the creation of the snake and the creation of the food. <br>
 
 ##### Snake
@@ -38,7 +37,9 @@ This was created to help the users understand how the game works and how to play
 <img width="300" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png">
 
 ##### Run 
-<img width="300" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> 
+The snake is able to move through this run method and a timer is what actually invokes the movement of the snake. However, the changes in directions for the snake are induced by switch-case statements. <br>
+<img width="300" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
+
 <img width="300" alt="Screen Shot 2022-05-31 at 10 58 50 PM" src="https://user-images.githubusercontent.com/89156607/171345791-33a7fda3-5920-4777-af0a-75cb6807735a.png"> <br>
 
 
