@@ -16,24 +16,29 @@ delete: reset all the settings back to default <br>
 #### Background
 In this class, we created the checkerboard pattern for the game board, using fillRect to make the square in light purple and a darker light purple color. We used for loops to code the alternating colored blocks with fillRect. <br>
 <img width="300" alt="backgroundnoncode" src="https://user-images.githubusercontent.com/89156607/171343711-c7a63c96-421a-41d6-b740-75fd15cf451c.png"> 
-<img width="340" alt="backgroundsnake" src="https://user-images.githubusercontent.com/89156607/171343870-94d74c34-19dd-4c61-bef0-a9943d64f97f.png"> 
+<img width="340" alt="backgroundsnake" src="https://user-images.githubusercontent.com/89156607/171343870-94d74c34-19dd-4c61-bef0-a9943d64f97f.png"> <br>
 #### Frame
 <br>
 The majority of the action is going on in the frame. This has all of the methods needed to play the game. It also invokes the creation of the snake and the creation of the food. <br>
+
 ##### Snake
-<img width="650" alt="Screen Shot 2022-06-01 at 12 04 09 AM" src="https://user-images.githubusercontent.com/89156607/171346917-c975c58f-cf71-4fe4-b894-58e755c57c3e.png">
+The snake is created when the boolan variable, playing, is true. The snake is created using for loops which encode the fillRect squares to make the snake and it's length. <br>
+<img width="300" alt="Screen Shot 2022-06-01 at 12 04 09 AM" src="https://user-images.githubusercontent.com/89156607/171346917-c975c58f-cf71-4fe4-b894-58e755c57c3e.png"> <br>
 
 ##### Food
-<img width="429" alt="Screen Shot 2022-06-01 at 12 03 58 AM" src="https://user-images.githubusercontent.com/89156607/171346885-2e1447ad-fec9-40e3-95cf-c9c4817c33dc.png">
+The food is just a circle that is created when th game is running. <br>
+<img width="300" alt="Screen Shot 2022-06-01 at 12 03 58 AM" src="https://user-images.githubusercontent.com/89156607/171346885-2e1447ad-fec9-40e3-95cf-c9c4817c33dc.png"> <br>
 
 ###### Randomization of the Food
-<img width="486" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png">
+This causes the food to randomize on another location on the 2 1d arrays and set an circle for food in a block. This occurs after the snake has collided with a food.
+<img width="300" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png"> <br>
 
 ##### Display Panel
-<img width="780" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png">
+This was created to help the users understand how the game works and how to play the game.
+<img width="300" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png">
 
 ##### Run 
-<img width="300" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
+<img width="300" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> 
 <img width="300" alt="Screen Shot 2022-05-31 at 10 58 50 PM" src="https://user-images.githubusercontent.com/89156607/171345791-33a7fda3-5920-4777-af0a-75cb6807735a.png"> <br>
 
 
