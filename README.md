@@ -30,7 +30,7 @@ This causes the food to randomize on another location on the 2 1d arrays and set
 <img width="500" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png"> <br>
 ##### Display Panel
 This was created to help the users understand how the game works and how to play the game. When the user holds down on the enter/return key, the instructions appear. <br>
-<img width="500" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png"> <br>
+ <img width="500" alt="Screen Shot 2022-06-01 at 10 25 42 AM" src="https://user-images.githubusercontent.com/89156607/171465715-3b6b0b1d-9c3e-4106-a647-4a1c9a375443.png"> <br>
 ##### Run 
 The snake is able to move through this run method and a timer is what actually invokes the movement of the snake. However, the changes in directions for the snake are induced by switch-case statements. <br>
 <img width="500" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
