@@ -21,26 +21,31 @@ In this class, we created the checkerboard pattern for the game board, using fil
 <br>
 The majority of the action is going on in the frame. This has all of the methods needed to play the game. It also invokes the creation of the snake and the creation of the food. <br>
 ##### Snake
+<img width="650" alt="Screen Shot 2022-06-01 at 12 04 09 AM" src="https://user-images.githubusercontent.com/89156607/171346917-c975c58f-cf71-4fe4-b894-58e755c57c3e.png">
 
 ##### Food
+<img width="429" alt="Screen Shot 2022-06-01 at 12 03 58 AM" src="https://user-images.githubusercontent.com/89156607/171346885-2e1447ad-fec9-40e3-95cf-c9c4817c33dc.png">
+
 ###### Randomization of the Food
+<img width="486" alt="Screen Shot 2022-06-01 at 12 03 41 AM" src="https://user-images.githubusercontent.com/89156607/171346833-5270e7f7-b31d-4b6d-a335-a5395b1c2dec.png">
 
 ##### Display Panel
+<img width="780" alt="Screen Shot 2022-06-01 at 12 03 28 AM" src="https://user-images.githubusercontent.com/89156607/171346810-76431ecb-7035-43c7-a4e3-f5cce20e1045.png">
 
 ##### Run 
-<img width="539" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
-<img width="310" alt="Screen Shot 2022-05-31 at 10 58 50 PM" src="https://user-images.githubusercontent.com/89156607/171345791-33a7fda3-5920-4777-af0a-75cb6807735a.png"> <br>
+<img width="300" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
+<img width="300" alt="Screen Shot 2022-05-31 at 10 58 50 PM" src="https://user-images.githubusercontent.com/89156607/171345791-33a7fda3-5920-4777-af0a-75cb6807735a.png"> <br>
 
 
 ##### Collision
 ###### Collision Between Snake and Food
-<img width="783" alt="Screen Shot 2022-05-31 at 11 58 12 PM" src="https://user-images.githubusercontent.com/89156607/171345959-4b057c74-679c-43e2-87d3-672e9883b9cd.png">
+<img width="300" alt="Screen Shot 2022-05-31 at 11 58 12 PM" src="https://user-images.githubusercontent.com/89156607/171345959-4b057c74-679c-43e2-87d3-672e9883b9cd.png">
 
 ###### Collision of Snake to End Game
-<img width="520" alt="Screen Shot 2022-05-31 at 11 58 02 PM" src="https://user-images.githubusercontent.com/89156607/171345938-3af11ece-bd46-42e4-9d8d-270ab18521b0.png">
+<img width="300" alt="Screen Shot 2022-05-31 at 11 58 02 PM" src="https://user-images.githubusercontent.com/89156607/171345938-3af11ece-bd46-42e4-9d8d-270ab18521b0.png">
 
 ##### Needed Actions
-<img width="313" alt="Screen Shot 2022-05-31 at 10 57 04 PM" src="https://user-images.githubusercontent.com/89156607/171345840-aa176603-c91e-4616-a2f2-353e3432f0c8.png">
+<img width="300" alt="Screen Shot 2022-05-31 at 10 57 04 PM" src="https://user-images.githubusercontent.com/89156607/171345840-aa176603-c91e-4616-a2f2-353e3432f0c8.png">
 
 
 ### Acknowledgements
