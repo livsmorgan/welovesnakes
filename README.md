@@ -46,7 +46,5 @@ When the snake's head collides with the walls of the board(top, bottom,left, or 
 ##### Needed Actions
 When the game begins playing, certain method actions are immediately needed for the insurance of a working game. The checks for collision between the snake and the food, the checks for collision between the boundaries and the body itself, and the running of the snake all need to be working hence the action events.  <br>
 <img width="300" alt="Screen Shot 2022-05-31 at 10 57 04 PM" src="https://user-images.githubusercontent.com/89156607/171345840-aa176603-c91e-4616-a2f2-353e3432f0c8.png"> <br>
-### Video Demonstration of Snake Game
-https://user-images.githubusercontent.com/89156607/171464713-cc943716-6295-4226-b5bc-9b38fb8e8c38.mp4 <br>
 ### Acknowledgements
 The snake and the food were created by Chhaya Maurya and Liv Morgan. The Snake Game was coded by Chhaya Maurya and Liv Morgan. This game was inspired by the Google Snake Game. <br>
