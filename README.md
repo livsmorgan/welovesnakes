@@ -8,7 +8,7 @@ This game is derived from the Google snake game. In this snake game, the user at
 ### Usage / Game Play
 wasd keys or arrow keys: controls the direction of the snake(up, down, left, right) <br>
 space bar: start the snake game <br>
-return/enter key: holdd down to display instructions panel for snake game <br>
+return/enter key: hold down to display instructions panel for snake game <br>
 number keys(1, 2, 3): adjusts the speed of the snake(1: fast, 2: normal, 3: slow) <br>
 plus and minus sign keys: increase or decrease the size of the board <br>
 delete: reset all the settings back to default <br>
@@ -20,7 +20,7 @@ In this class, we created the checkerboard pattern for the game board, using fil
 #### Frame
 The majority of the action is going on in the frame. This has all of the methods needed to play the game. It also invokes the creation of the snake and the creation of the food. <br>
 ##### Snake
-The snake is created when the boolean variable, playing, is true. The snake is created using for loops which encode the fillRect squares to make the snake's head and snake's length. The colors between the head and the body of the snake are deffering. <br>
+The snake is created when the boolean variable, playing, is true. The snake is created using for loops which encode the fillRect squares to make the snake's head and snake's length. The colors between the head and the body of the snake are deferring. <br>
 <img width="500" alt="Screen Shot 2022-06-01 at 12 04 09 AM" src="https://user-images.githubusercontent.com/89156607/171346917-c975c58f-cf71-4fe4-b894-58e755c57c3e.png"> <br>
 ##### Food
 The food is just a circle that is created when the game is running. When the snake collides with the food, the score and snake's body length each increases by 1.  <br>
@@ -35,17 +35,17 @@ This was created to help the users understand how the game works and how to play
 ##### Run 
 The snake is able to move through this run method and a timer is what actually invokes the movement of the snake. However, the changes in directions for the snake are induced by switch-case statements. <br>
 <img width="500" alt="Screen Shot 2022-05-31 at 11 59 03 PM" src="https://user-images.githubusercontent.com/89156607/171346092-0f53dd8b-6713-4bb4-b738-702731ef7c4b.png"> <br>
-Using switch-case statements with the key codes give the user the opoortunites to change the direction of the snkae through either the arrow keys or the wasd keys. <br>
+Using switch-case statements with the key codes give the user the opportunities to change the direction of the snake through either the arrow keys or the wasd keys. <br>
 <img width="500" alt="Screen Shot 2022-05-31 at 10 58 50 PM" src="https://user-images.githubusercontent.com/89156607/171345791-33a7fda3-5920-4777-af0a-75cb6807735a.png"> <br>
 ##### Collision
 ###### Collision Between Snake and Food
-When the snake collids with the food, then the snake's body length increases by 1 and the score increass by 1 as well. As soon as the snake collids, the food is randomzied to another location on the 2 1d array boards. <br>
+When the snake collides with the food, then the snake's body length increases by 1 and the score increases by 1 as well. As soon as the snake collides, the food is randomized to another location on the 2 1d array boards. <br>
 <img width="500" alt="Screen Shot 2022-05-31 at 11 58 12 PM" src="https://user-images.githubusercontent.com/89156607/171345959-4b057c74-679c-43e2-87d3-672e9883b9cd.png"> <br>
 ###### Collision of Snake to End Game
 When the snake's head collides with the walls of the board(top, bottom,left, or right), then the game immediately ends and the playing boolean variable becomes false. The same goes for when the snake's head collides with any part of it's body, the game immediately ends. <br>
 <img width="500" alt="Screen Shot 2022-05-31 at 11 58 02 PM" src="https://user-images.githubusercontent.com/89156607/171345938-3af11ece-bd46-42e4-9d8d-270ab18521b0.png"> <br>
 ##### Needed Actions
-When the game begins playing, certain method actions are immediately needed for the ensurance of a working game. The checks for collison between the snake and the food, the checks for collision between the boundaries and the body itself, and the running of the snake all need to be working hence the action events.  <br>
+When the game begins playing, certain method actions are immediately needed for the insurance of a working game. The checks for collision between the snake and the food, the checks for collision between the boundaries and the body itself, and the running of the snake all need to be working hence the action events.  <br>
 <img width="300" alt="Screen Shot 2022-05-31 at 10 57 04 PM" src="https://user-images.githubusercontent.com/89156607/171345840-aa176603-c91e-4616-a2f2-353e3432f0c8.png"> <br>
 ### Acknowledgements
 The snake and the food were created by Chhaya Maurya and Liv Morgan. The Snake Game was coded by Chhaya Maurya and Liv Morgan. This game was inspired by the Google Snake Game. <br>
